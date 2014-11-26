@@ -10,7 +10,5 @@ Created on 2014/11/26
 class PyCSearchResult:
     def __init__(self):
         #変数の初期化
-        fname = [];                 #検索してHITしたファイル名
-        line_num = [];              #
-    
-        
+        fname = []                  # 検索してHITしたファイル名
+        line_num = []               # a
