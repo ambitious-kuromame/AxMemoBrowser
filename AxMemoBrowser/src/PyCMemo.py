@@ -57,8 +57,7 @@ class PyCMemo:
         for fname in self.file_list:
             print('=検索開始=');
             print(fname);
-            try:
-                fp = codecs.open(fname,'r','utf-8');
+            with codecs.open(fname,'r','utf-8') as fp :
                 line_num = 1;
                 try:
                     for line in fp.readlines():
@@ -70,8 +69,7 @@ class PyCMemo:
                 finally:
                     #想定外は何もしない．(本来は例外をスローするなどの工夫が必要)
                     pass
-            finally:
-                fp.close();
-                print('=検索終了=')
+            fp.close();
+            print('=検索終了=')
     
                     
